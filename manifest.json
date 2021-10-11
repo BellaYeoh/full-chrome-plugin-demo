@@ -1,23 +1,20 @@
 {
   "manifest_version": 2,
-  "name": "Chrome插件demo",
-  "version": "1.0",
-  "description": "最简单的Chrome插件demo，需要快速做一个简单的插件可以基于这个仓库开发",
-  "author": "yeoh",
+  "name": "page-action-demo",
+  "version": "1.0.0",
+  "description": "pageAction演示",
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
   },
-  "browser_action": {
-    "default_icon": "icon.png",
+  "page_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "我是pageAction",
     "default_popup": "popup.html"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://www.baidu.com/*"],
-      "js": ["content-script.js"]
-    }
-  ],
-  "web_accessible_resources": ["inject.js"]
+  "permissions": ["declarativeContent"],
+  "background": {
+    "scripts": ["js/background.js"]
+  }
 }
