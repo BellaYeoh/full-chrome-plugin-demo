@@ -19,5 +19,5 @@
       "js": ["content-script.js"]
     }
   ],
-  "web_accessible_resources": ["inject.js"]
+  "permissions": ["tabs"]
 }
